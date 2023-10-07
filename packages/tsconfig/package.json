@@ -1,0 +1,7 @@
+{
+    "name": "@moma/tsconfig",
+    "private": true,
+    "publishConfig": {
+        "access": "public"
+      }
+}

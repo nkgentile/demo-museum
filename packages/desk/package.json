@@ -1,5 +1,5 @@
 {
-  "name": "@moma/sanity",
+  "name": "@moma/desk",
   "private": true,
   "type": "module",
   "main": "src/index.ts",
@@ -9,13 +9,9 @@
     "format": "prettier --write . --ignore-path ../../.gitignore",
     "typecheck": "tsc"
   },
-  "dependencies": {
-    "@sanity/vision": "^3.0.0"
-  },
   "devDependencies": {
-    "@moma/desk": "file:../desk",
-    "@moma/prettier": "file:../prettier",
-    "@moma/tsconfig": "file:../tsconfig",
+    "@moma/prettier": "file:../packages/prettier",
+    "@moma/tsconfig": "file:../packages/tsconfig",
     "react": "^18",
     "sanity": "^3",
     "typescript": "^4"

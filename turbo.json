@@ -11,6 +11,9 @@
     "format": {
       "outputs": []
     },
+    "typecheck": {
+      "outputs": []
+    },
     "dev": {
       "dependsOn": ["^build"],
       "cache": false

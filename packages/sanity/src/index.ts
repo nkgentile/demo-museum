@@ -1,5 +1,5 @@
 import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
+import {desk} from '@moma/desk'
 import {visionTool} from '@sanity/vision'
 import {types} from './schema'
 
@@ -27,7 +27,7 @@ export function defineSanityConfig(config: SanityConfig) {
     projectId,
     dataset,
 
-    plugins: [deskTool(), visionTool()],
+    plugins: [desk(), visionTool()],
 
     schema: {
       types,

@@ -4,6 +4,7 @@
     "files": [],
     "references": [
         { "path": "apps/studio" },
+        { "path": "packages/desk" },
         { "path": "packages/sanity" },
     ]
 }

@@ -1,5 +1,6 @@
 {
   "name": "@moma/prettier",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "main": "index.js"
 }
