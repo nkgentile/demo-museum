@@ -1,0 +1,5 @@
+{
+  "name": "@moma/prettier",
+  "private": true,
+  "type": "module"
+}

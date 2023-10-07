@@ -1,0 +1,24 @@
+{
+  "name": "@moma/sanity",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx --ignore-path ../../.gitignore --max-warnings 0 .",
+    "format": "prettier --write . --ignore-path ../../.gitignore"
+  },
+  "dependencies": {
+    "@sanity/vision": "^3.0.0"
+  },
+  "devDependencies": {
+    "@moma/prettier": "file:../packages/prettier",
+    "react": "^18",
+    "sanity": "^3",
+    "typescript": "^4"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "sanity": "^3"
+  }
+}

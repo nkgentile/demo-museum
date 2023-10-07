@@ -1,0 +1,26 @@
+{
+  "name": "studio",
+  "private": true,
+  "main": "package.json",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx --ignore-path ../../.gitignore --max-warnings 0 .",
+    "format": "prettier --write . --ignore-path ../../.gitignore"
+  },
+  "dependencies": {
+    "@moma/sanity": "file:../packages/sanity",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "sanity": "^3.0.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@moma/prettier": "file:../packages/prettier",
+    "@types/styled-components": "^5.1.26",
+    "typescript": "^4.0.0"
+  }
+}
