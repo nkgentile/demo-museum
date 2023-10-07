@@ -2,6 +2,7 @@ import {defineConfig} from 'sanity'
 import {desk} from '@moma/desk'
 import {visionTool} from '@sanity/vision'
 import {types} from './schema'
+import {glossary} from './glossary'
 
 /**
  * Configuration options that will be passed in
@@ -27,7 +28,7 @@ export function defineSanityConfig(config: SanityConfig) {
     projectId,
     dataset,
 
-    plugins: [desk(), visionTool()],
+    plugins: [desk(), visionTool(), glossary()],
 
     schema: {
       types,
