@@ -1,5 +1,10 @@
-import { definePlugin } from "sanity";
+import {definePlugin} from 'sanity'
+import {term} from './term'
 
 export const glossary = definePlugin({
-    name: "@moma/glossary",
+  name: '@moma/glossary',
+
+  schema: {
+    types: [term],
+  },
 })
