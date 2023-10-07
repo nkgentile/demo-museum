@@ -1,4 +1,5 @@
 import {definePlugin} from 'sanity'
+
 import {term} from './term'
 import {termInlineBlock} from './termBlock'
 
