@@ -1,8 +1,8 @@
 import type {Id} from 'sanity'
 import type {ListItem, ListItemBuilder, StructureResolver} from 'sanity/desk'
 
-import type {DeskModule} from './types'
 import {glossary} from './glossary'
+import type {DeskModule} from './types'
 
 const STRUCTURE_HIDDEN_TYPES: string[] = ['media.tag']
 

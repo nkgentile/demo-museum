@@ -1,8 +1,10 @@
-import {defineConfig} from 'sanity'
 import {desk} from '@moma/desk'
+import {assist} from '@sanity/assist'
 import {visionTool} from '@sanity/vision'
-import {types} from './schema'
+import {defineConfig} from 'sanity'
+
 import {glossary} from './glossary'
+import {types} from './schema'
 import {structure} from './structure'
 
 /**
@@ -29,7 +31,7 @@ export function defineSanityConfig(config: SanityConfig) {
     projectId,
     dataset,
 
-    plugins: [desk({structure}), visionTool(), glossary()],
+    plugins: [desk({structure}), visionTool(), assist(), glossary()],
 
     schema: {
       types,
