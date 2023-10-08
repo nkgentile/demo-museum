@@ -2,9 +2,11 @@ import {desk} from '@moma/desk'
 import {assist} from '@sanity/assist'
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
+import {media, mediaAssetSource} from 'sanity-plugin-media'
 
+import {artists} from './artists'
+import {blocks} from './blocks'
 import {glossary} from './glossary'
-import {types} from './schema'
 import {structure} from './structure'
 
 /**
@@ -31,10 +33,15 @@ export function defineSanityConfig(config: SanityConfig) {
     projectId,
     dataset,
 
-    plugins: [desk({structure}), visionTool(), assist(), glossary()],
+    plugins: [desk({structure}), media(), visionTool(), assist(), blocks(), glossary(), artists()],
 
-    schema: {
-      types,
+    form: {
+      image: {
+        assetSources: (prev) => prev.filter((assetSource) => assetSource === mediaAssetSource),
+      },
+      file: {
+        assetSources: (prev) => prev.filter((assetSource) => assetSource === mediaAssetSource),
+      },
     },
   })
 }
