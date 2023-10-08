@@ -1,4 +1,5 @@
 import {TagIcon} from '@sanity/icons'
+import {Text} from '@sanity/ui'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const term = defineType({
@@ -18,15 +19,13 @@ export const term = defineType({
     defineField({
       title: 'Description',
       name: 'description',
-      type: 'array',
+      type: 'array' as const,
       of: [
         defineArrayMember({
           type: 'block',
-          of: [
-            defineArrayMember({
-              type: 'term.inlineBlock',
-            }),
-          ],
+          marks: {
+            annotations: [{type: 'annotation.reference'}],
+          },
         }),
       ],
     }),
@@ -36,6 +35,20 @@ export const term = defineType({
   preview: {
     select: {
       title: 'term',
+    },
+
+    prepare(value) {
+      const title = value.title || 'Missing term'
+      const firstLetter = value.title?.at(0)?.toUpperCase()
+
+      return {
+        media: (
+          <Text weight="bold" muted>
+            {firstLetter}
+          </Text>
+        ),
+        title,
+      }
     },
   },
 

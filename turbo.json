@@ -9,7 +9,7 @@
       "outputs": []
     },
     "format": {
-      "outputs": []
+      "outputs": ["node_modules/.cache/prettier"]
     },
     "typecheck": {
       "outputs": []

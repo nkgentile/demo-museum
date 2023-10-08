@@ -1,10 +1,13 @@
 import type {Id} from 'sanity'
 import type {ListItem, ListItemBuilder, StructureResolver} from 'sanity/desk'
 
-import {glossary} from './glossary'
+import {artists} from './artists.structure'
+import {glossary} from './glossary.structure'
 import type {DeskModule} from './types'
 
 const STRUCTURE_HIDDEN_TYPES: string[] = ['media.tag']
+
+const STRUCTURE_MODULES = [artists, glossary]
 
 export const structure: StructureResolver = (S, context) => {
   function buildModules(modules: DeskModule[] = []) {
@@ -17,7 +20,7 @@ export const structure: StructureResolver = (S, context) => {
     )
   }
 
-  const [items, schemaTypes] = buildModules([glossary])
+  const [items, schemaTypes] = buildModules(STRUCTURE_MODULES)
 
   const defaultItems = S.documentTypeListItems()
   const visibleDefaultItems = defaultItems.filter((item) => {

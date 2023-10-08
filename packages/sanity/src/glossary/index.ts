@@ -1,1 +1,1 @@
-export {glossary} from './glossary'
+export {glossary} from './glossary.plugin'
