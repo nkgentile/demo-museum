@@ -6,6 +6,7 @@ import {media, mediaAssetSource} from 'sanity-plugin-media'
 
 import {artists} from './artists'
 import {blocks} from './blocks'
+import {collection} from './collection'
 import {glossary} from './glossary'
 import {structure} from './structure'
 
@@ -33,7 +34,17 @@ export function defineSanityConfig(config: SanityConfig) {
     projectId,
     dataset,
 
-    plugins: [desk({structure}), media(), visionTool(), assist(), blocks(), glossary(), artists()],
+    plugins: [
+      desk({structure}),
+      media(),
+      visionTool(),
+      assist(),
+
+      blocks(),
+      glossary(),
+      artists(),
+      collection(),
+    ],
 
     form: {
       image: {
