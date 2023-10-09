@@ -1,0 +1,9 @@
+{
+  "name": "@museum/eslint-config",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "sanity.js"
+  ]
+}

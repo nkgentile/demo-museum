@@ -10,8 +10,9 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@museum/prettier": "file:../packages/prettier",
-    "@museum/tsconfig": "file:../packages/tsconfig",
+    "@museum/eslint-config": "file:../eslint",
+    "@museum/prettier": "file:../prettier",
+    "@museum/tsconfig": "file:../tsconfig",
     "react": "^18",
     "sanity": "^3",
     "typescript": "^4"

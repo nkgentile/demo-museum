@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@museum/desk": "file:../desk",
+    "@museum/eslint-config": "file:../eslint",
     "@museum/prettier": "file:../prettier",
     "@museum/tsconfig": "file:../tsconfig",
     "react": "^18",
