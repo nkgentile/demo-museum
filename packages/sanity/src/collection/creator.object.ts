@@ -6,8 +6,8 @@ export const creator = defineType({
   name: 'creator',
   type: 'reference',
   to: [{type: 'person'}],
-  
+
   options: {
-    disableNew: true
-  }
+    disableNew: true,
+  },
 })
