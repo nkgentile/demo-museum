@@ -6,7 +6,7 @@ import {department} from './department.document'
 import {work} from './work.document'
 
 export const collection = definePlugin({
-  name: '@moma/collection',
+  name: '@museum/collection',
 
   schema: {
     types: [department, work, classification, creator],

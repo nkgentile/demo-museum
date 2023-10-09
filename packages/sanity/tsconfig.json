@@ -1,5 +1,5 @@
 {
-  "extends": "@moma/tsconfig/sanity.json",
+  "extends": "@museum/tsconfig/sanity.json",
   "include": ["./src"],
   "compilerOptions": {
     "rootDir": ".",

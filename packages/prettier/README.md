@@ -1,1 +1,1 @@
-# `@moma/prettier`
+# `@museum/prettier`

@@ -20,7 +20,7 @@ export const desk = definePlugin<Omit<DeskToolOptions, 'defaultDocumentNode'> | 
       ...base.document,
       productionUrl,
     },
-    name: '@moma/desk',
+    name: '@museum/desk',
   }
 })
 

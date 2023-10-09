@@ -1,1 +1,1 @@
-export {default} from '@moma/prettier'
+export {default} from '@museum/prettier'

@@ -5,7 +5,7 @@ import {name} from './name.object'
 import {person} from './person.document'
 
 export const artists = definePlugin({
-  name: '@moma/artists',
+  name: '@museum/artists',
 
   schema: {
     types: [name, person, group],

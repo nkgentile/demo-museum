@@ -1,5 +1,5 @@
 {
-  "name": "@moma/sanity",
+  "name": "@museum/sanity",
   "private": true,
   "type": "module",
   "main": "src/index.ts",
@@ -17,9 +17,9 @@
     "sanity-plugin-media": "^2.2.2"
   },
   "devDependencies": {
-    "@moma/desk": "file:../desk",
-    "@moma/prettier": "file:../prettier",
-    "@moma/tsconfig": "file:../tsconfig",
+    "@museum/desk": "file:../desk",
+    "@museum/prettier": "file:../prettier",
+    "@museum/tsconfig": "file:../tsconfig",
     "react": "^18",
     "sanity": "^3.16.7",
     "typescript": "^4"

@@ -1,5 +1,5 @@
 {
-  "name": "@moma/desk",
+  "name": "@museum/desk",
   "private": true,
   "type": "module",
   "main": "src/index.ts",
@@ -10,8 +10,8 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@moma/prettier": "file:../packages/prettier",
-    "@moma/tsconfig": "file:../packages/tsconfig",
+    "@museum/prettier": "file:../packages/prettier",
+    "@museum/tsconfig": "file:../packages/tsconfig",
     "react": "^18",
     "sanity": "^3",
     "typescript": "^4"

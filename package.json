@@ -1,5 +1,5 @@
 {
-  "name": "client-moma",
+  "name": "demo-museum",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -7,7 +7,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nkgentile/sanity-shopify-monorepo.git"
+    "url": "https://github.com/nkgentile/demo-museum.git"
   },
   "scripts": {
     "build": "turbo run build",
