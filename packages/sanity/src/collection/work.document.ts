@@ -1,7 +1,5 @@
 import {ImageIcon} from '@sanity/icons'
-import {defineArrayMember, defineField, defineType, type FieldGroupDefinition} from 'sanity'
-
-// const groups: FieldGroupDefinition[] = [{}]
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const work = defineType({
   title: 'Work',
