@@ -7,6 +7,7 @@ import {media, mediaAssetSource} from 'sanity-plugin-media'
 import {artists} from './artists'
 import {blocks} from './blocks'
 import {collection} from './collection'
+import {exhibitions} from './exhibitions'
 import {glossary} from './glossary'
 import {structure} from './structure'
 
@@ -44,6 +45,7 @@ export function defineSanityConfig(config: SanityConfig) {
       glossary(),
       artists(),
       collection(),
+      exhibitions(),
     ],
 
     form: {
