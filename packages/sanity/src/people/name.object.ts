@@ -10,28 +10,28 @@ export const name = defineType({
       title: 'Honorific Prefix',
       name: 'prefix',
       type: 'string',
-      description: `An honorific prefix preceding a person's name such as Dr/Mrs/Mr.`,
+      description: `An honorific prefix preceding a artist's name such as Dr/Mrs/Mr.`,
     }),
 
     defineField({
       title: 'Given Name',
       name: 'givenName',
       type: 'string',
-      description: 'In the U.S., the first name of a person.',
+      description: 'In the U.S., the first name of a artist.',
     }),
 
     defineField({
       title: 'Surname',
       name: 'surname',
       type: 'string',
-      description: 'In the U.S., the last name of a person.',
+      description: 'In the U.S., the last name of a artist.',
     }),
 
     defineField({
       title: 'Honorific Suffix',
       name: 'suffix',
       type: 'string',
-      description: `An honorific suffix following a Person's name such as M.D./PhD/MSCSW.`,
+      description: `An honorific suffix following a person's name such as M.D./PhD/MSCSW.`,
     }),
   ],
 })

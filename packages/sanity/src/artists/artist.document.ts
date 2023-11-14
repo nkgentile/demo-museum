@@ -1,17 +1,17 @@
 import {UserIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-import {isName} from './name.object'
+import {isName} from '../people'
 
-export const person = defineType({
-  title: 'Person',
-  name: 'person',
+export const artist = defineType({
+  title: 'Artist',
+  name: 'artist',
   type: 'document',
 
   fields: [
     defineField({
       title: 'Portrait',
-      description: 'An image of the person.',
+      description: 'An image of the artist.',
 
       name: 'portrait',
       type: 'image',
@@ -32,7 +32,7 @@ export const person = defineType({
 
     defineField({
       title: 'Alternate Name',
-      description: 'An alternate name for the person, e.g. an alias',
+      description: 'An alternate name for the artist, e.g. an alias',
 
       name: 'alternateName',
       type: 'string',

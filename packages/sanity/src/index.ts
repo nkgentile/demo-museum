@@ -9,6 +9,8 @@ import {blocks} from './blocks'
 import {collection} from './collection'
 import {exhibitions} from './exhibitions'
 import {glossary} from './glossary'
+import {magazine} from './magazine'
+import {people} from './people'
 import {structure} from './structure'
 
 /**
@@ -42,10 +44,12 @@ export function defineSanityConfig(config: SanityConfig) {
       assist(),
 
       blocks(),
+      people(),
       glossary(),
       artists(),
       collection(),
       exhibitions(),
+      magazine(),
     ],
 
     form: {

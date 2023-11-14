@@ -1,12 +1,13 @@
 import {definePlugin} from 'sanity'
 
-import {quoteBlock} from './quote.block'
-import {referenceAnnotation} from './reference.annotation'
+import {image} from './image.block'
+import {quote} from './quote.block'
+import {reference} from './reference.annotation'
 
 export const blocks = definePlugin({
   name: '@museum/blocks',
 
   schema: {
-    types: [quoteBlock, referenceAnnotation],
+    types: [quote, reference, image],
   },
 })

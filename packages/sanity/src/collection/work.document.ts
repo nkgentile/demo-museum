@@ -31,9 +31,11 @@ export const work = defineType({
 
     defineField({
       title: 'Department',
+
       name: 'department',
       type: 'reference',
       to: [{type: 'department'}],
+
       options: {
         disableNew: true,
       },
@@ -95,4 +97,11 @@ export const work = defineType({
   ],
 
   icon: ImageIcon,
+  preview: {
+    select: {
+      media: 'media.0.asset',
+      title: 'title',
+      // subtitle: 'creators.0.name'
+    }
+  }
 })
