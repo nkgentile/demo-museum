@@ -26,7 +26,11 @@ export const term = defineType({
           marks: {
             annotations: [{type: 'annotation.reference'}],
           },
+          // of: [defineArrayMember({type: 'term.inlineBlock'})],
         }),
+        defineArrayMember({
+          type: 'block.image'
+        })
       ],
     }),
   ],

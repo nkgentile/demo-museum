@@ -1,5 +1,5 @@
 {
-    "name": "@moma/tsconfig",
+    "name": "@museum/tsconfig",
     "private": true,
     "publishConfig": {
         "access": "public"

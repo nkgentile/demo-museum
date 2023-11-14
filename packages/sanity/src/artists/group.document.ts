@@ -28,7 +28,7 @@ export const group = defineType({
     defineField({
       name: 'members',
       type: 'array' as const,
-      of: [defineArrayMember({type: 'person'})],
+      of: [defineArrayMember({type: 'artist'})],
 
       validation: (rule) => rule.unique(),
     }),

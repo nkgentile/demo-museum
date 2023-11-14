@@ -1,5 +1,5 @@
 {
-  "name": "@moma/prettier",
+  "name": "@museum/prettier",
   "private": true,
   "type": "module",
   "main": "index.js"

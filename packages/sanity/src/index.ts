@@ -1,4 +1,4 @@
-import {desk} from '@moma/desk'
+import {desk} from '@museum/desk'
 import {assist} from '@sanity/assist'
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
@@ -7,7 +7,10 @@ import {media, mediaAssetSource} from 'sanity-plugin-media'
 import {artists} from './artists'
 import {blocks} from './blocks'
 import {collection} from './collection'
+import {exhibitions} from './exhibitions'
 import {glossary} from './glossary'
+import {magazine} from './magazine'
+import {people} from './people'
 import {structure} from './structure'
 
 /**
@@ -26,7 +29,7 @@ type SanityConfig = {
  * In this example, it's a single workspace but adjust as necessary.
  */
 export function defineSanityConfig(config: SanityConfig) {
-  const {projectId, dataset, title = 'MOMA'} = config
+  const {projectId, dataset, title = 'Museum'} = config
 
   return defineConfig({
     title,
@@ -41,9 +44,12 @@ export function defineSanityConfig(config: SanityConfig) {
       assist(),
 
       blocks(),
+      people(),
       glossary(),
       artists(),
       collection(),
+      exhibitions(),
+      magazine(),
     ],
 
     form: {

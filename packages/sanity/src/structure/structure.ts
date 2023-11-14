@@ -1,18 +1,23 @@
 import type {Id} from 'sanity'
-import type {ListItem, ListItemBuilder, StructureResolver} from 'sanity/desk'
+import type {Divider, ListItem, ListItemBuilder, StructureResolver} from 'sanity/desk'
 
 import {collection} from './collection.structure'
+import {exhibitions} from './exhibition.structure'
 import {glossary} from './glossary.structure'
+import {magazine} from './magazine.structure'
+import {people} from './people.structure'
 import type {DeskModule} from './types'
 
 const STRUCTURE_HIDDEN_TYPES: string[] = ['media.tag']
 
-const STRUCTURE_MODULES = [collection, glossary]
-
 export const structure: StructureResolver = (S, context) => {
-  function buildModules(modules: DeskModule[] = []) {
-    return modules.reduce<[(ListItem | ListItemBuilder)[], Id[]]>(
+  function buildModules(modules: (DeskModule | Divider)[] = []) {
+    return modules.reduce<[(ListItem | ListItemBuilder | Divider)[], Id[]]>(
       ([items, schemaTypes], itemBuilder) => {
+        if (typeof itemBuilder === 'object') {
+          return [items.concat(itemBuilder), schemaTypes]
+        }
+
         const item = itemBuilder(S, context)
         return [items.concat(item[0]), schemaTypes.concat(item[1])]
       },
@@ -20,7 +25,14 @@ export const structure: StructureResolver = (S, context) => {
     )
   }
 
-  const [items, schemaTypes] = buildModules(STRUCTURE_MODULES)
+  const [items, schemaTypes] = buildModules([
+    collection,
+    exhibitions,
+    magazine,
+    S.divider(),
+    people,
+    glossary,
+  ])
 
   const defaultItems = S.documentTypeListItems()
   const visibleDefaultItems = defaultItems.filter((item) => {

@@ -10,7 +10,7 @@ export const collection: DeskModule = (S) => {
   const departments = S.documentTypeListItem('department').title('Departments').id('departments')
   const works = S.documentTypeListItem('work').title('Works').id('works')
 
-  const people = S.documentTypeListItem('person').title('People').id('people').serialize()
+  const people = S.documentTypeListItem('artist').title('People').id('people').serialize()
   const groups = S.documentTypeListItem('group').title('Groups').id('group')
 
   {
@@ -35,9 +35,12 @@ export const collection: DeskModule = (S) => {
       .title(title)
       .icon(ImagesIcon)
       .child((id) => {
-        return S.list().title(title).id(id).items([works, artists, departments, classifications])
+        return S.list()
+          .title(title)
+          .id(id)
+          .items([works, artists, S.divider(), departments, classifications])
       })
   }
 
-  return [collection, ['work', 'department', 'person', 'group', 'classification']]
+  return [collection, ['work', 'department', 'artist', 'group', 'classification']]
 }
